@@ -288,16 +288,22 @@
             <action>
               <properties name="defaultConfirmationPrompt" value="Are you sure you want to update the item?" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.0"/>
               <properties name="showConfirmation" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.1"/>
-              <properties name="redirectStyle" value="current" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.2"/>
+              <properties name="redirectStyle" value="application" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.2"/>
               <properties name="pageSelectionType" value="page" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.3"/>
               <properties name="showSuccessNotification" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.4"/>
               <properties name="actionType" value="update" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.5"/>
+              <properties xsi:type="uitemplate:DataboundProperty" name="redirectUrl" value="application/ci1_policy_search" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.6">
+                <data selectionName="policy_search" selectionLabel="Policy Search">
+                  <dataRef href="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/policy_search.page#/"/>
+                </data>
+              </properties>
               <propertyMap key="defaultConfirmationPrompt" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.0"/>
               <propertyMap key="showConfirmation" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.1"/>
               <propertyMap key="redirectStyle" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.2"/>
               <propertyMap key="pageSelectionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.3"/>
               <propertyMap key="showSuccessNotification" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.4"/>
               <propertyMap key="actionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.5"/>
+              <propertyMap key="redirectUrl" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.6"/>
             </action>
           </properties>
           <properties name="actionInstanceId" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.2"/>
