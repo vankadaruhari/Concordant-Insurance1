@@ -227,6 +227,108 @@
           </children>
         </children>
       </children>
+      <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_columnhbox" parent="//@rootContainer/@children.0" widgetEntry="//@widgetMap[key='columnvbox2']">
+        <properties name="orientation" value="Horizontal" entry="//@rootContainer/@children.0/@children.1/@propertyMap.0"/>
+        <properties name="width" value="500" entry="//@rootContainer/@children.0/@children.1/@propertyMap.1"/>
+        <properties name="minWidth" value="" type="INTEGER" entry="//@rootContainer/@children.0/@children.1/@propertyMap.2"/>
+        <properties name="split" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.1/@propertyMap.3"/>
+        <properties name="overflow_x" value="hidden" entry="//@rootContainer/@children.0/@children.1/@propertyMap.4"/>
+        <properties name="labelWidth" value="150" type="INTEGER" entry="//@rootContainer/@children.0/@children.1/@propertyMap.5"/>
+        <properties name="labelAlign" value="left" entry="//@rootContainer/@children.0/@children.1/@propertyMap.6"/>
+        <properties name="halign" value="left" entry="//@rootContainer/@children.0/@children.1/@propertyMap.7"/>
+        <properties name="valign" value="top" entry="//@rootContainer/@children.0/@children.1/@propertyMap.8"/>
+        <properties name="defaultMargins" value="5" entry="//@rootContainer/@children.0/@children.1/@propertyMap.9"/>
+        <properties name="margins" value="" entry="//@rootContainer/@children.0/@children.1/@propertyMap.10"/>
+        <properties name="xcpId" value="columnvbox2" entry="//@rootContainer/@children.0/@children.1/@propertyMap.11"/>
+        <properties name="xtype" value="xcp_columnhbox" entry="//@rootContainer/@children.0/@children.1/@propertyMap.12"/>
+        <propertyMap key="orientation" value="//@rootContainer/@children.0/@children.1/@properties.0"/>
+        <propertyMap key="width" value="//@rootContainer/@children.0/@children.1/@properties.1"/>
+        <propertyMap key="minWidth" value="//@rootContainer/@children.0/@children.1/@properties.2"/>
+        <propertyMap key="split" value="//@rootContainer/@children.0/@children.1/@properties.3"/>
+        <propertyMap key="overflow_x" value="//@rootContainer/@children.0/@children.1/@properties.4"/>
+        <propertyMap key="labelWidth" value="//@rootContainer/@children.0/@children.1/@properties.5"/>
+        <propertyMap key="labelAlign" value="//@rootContainer/@children.0/@children.1/@properties.6"/>
+        <propertyMap key="halign" value="//@rootContainer/@children.0/@children.1/@properties.7"/>
+        <propertyMap key="valign" value="//@rootContainer/@children.0/@children.1/@properties.8"/>
+        <propertyMap key="defaultMargins" value="//@rootContainer/@children.0/@children.1/@properties.9"/>
+        <propertyMap key="margins" value="//@rootContainer/@children.0/@children.1/@properties.10"/>
+        <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.1/@properties.11"/>
+        <propertyMap key="xtype" value="//@rootContainer/@children.0/@children.1/@properties.12"/>
+        <children xsi:type="uitemplate:FragmentWidget" componentDefinitionId="xcp_fragment" parent="//@rootContainer/@children.0/@children.1" widgetEntry="//@widgetMap[key='fragment']">
+          <properties name="fieldLabel" value="Label:" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.0"/>
+          <properties name="fragment" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.1"/>
+          <properties name="fragmentExpression" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.2"/>
+          <properties name="fragmentWidgetInputs" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.3"/>
+          <properties name="fragmentDataInputs" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.4"/>
+          <properties name="fragmentDataOutputs" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.5"/>
+          <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.6"/>
+          <properties name="cls" value="xcp-content-area" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.7"/>
+          <properties name="margin" value="0 0 0 0" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.8"/>
+          <properties name="width" value="" type="INTEGER" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.9"/>
+          <properties name="height" value="" type="INTEGER" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.10"/>
+          <properties name="xcpId" value="fragment" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.11"/>
+          <properties name="fragmentId" value="view_policy_fragmen" entry="//@rootContainer/@children.0/@children.1/@children.0/@propertyMap.12"/>
+          <propertyMap key="fieldLabel" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.0"/>
+          <propertyMap key="fragment" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.1"/>
+          <propertyMap key="fragmentExpression" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.2"/>
+          <propertyMap key="fragmentWidgetInputs" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.3"/>
+          <propertyMap key="fragmentDataInputs" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.4"/>
+          <propertyMap key="fragmentDataOutputs" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.5"/>
+          <propertyMap key="hidden" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.6"/>
+          <propertyMap key="cls" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.7"/>
+          <propertyMap key="margin" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.8"/>
+          <propertyMap key="width" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.9"/>
+          <propertyMap key="height" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.10"/>
+          <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.11"/>
+          <propertyMap key="fragmentId" value="//@rootContainer/@children.0/@children.1/@children.0/@properties.12"/>
+          <fragment href="urn:ci1:com.emc.xcp.artifact.fragment:Artifacts/Fragments/view_policy_fragmen.fragment#/"/>
+          <inputs name="id">
+            <value>
+              <expression exprStr="sessionparameters.ci1.last_policy_id"/>
+            </value>
+          </inputs>
+          <inputs name="model"/>
+        </children>
+        <children componentDefinitionId="xcp_button" parent="//@rootContainer/@children.0/@children.1" widgetEntry="//@widgetMap[key='open_policy']">
+          <properties name="text" value="Open Policy" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.0"/>
+          <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.1">
+            <action>
+              <properties name="redirectStyle" value="specified" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.0"/>
+              <properties name="actionType" value="xcp_gotopage" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.1"/>
+              <properties name="pageSelectionType" value="page" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.2"/>
+              <properties xsi:type="uitemplate:DataboundProperty" name="redirectUrl" value="ci1_edit_policy" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.3">
+                <data selectionName="edit_policy" selectionLabel="Edit Policy">
+                  <dataRef href="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/edit_policy.page#/"/>
+                </data>
+              </properties>
+              <properties name="redirectUrlModel" value="ci1_policy" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.4"/>
+              <properties name="redirectObjectId" value="sessionparameters.ci1.last_policy_id" entry="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@propertyMap.5"/>
+              <propertyMap key="redirectStyle" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.0"/>
+              <propertyMap key="actionType" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.1"/>
+              <propertyMap key="pageSelectionType" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.2"/>
+              <propertyMap key="redirectUrl" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.3"/>
+              <propertyMap key="redirectUrlModel" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.4"/>
+              <propertyMap key="redirectObjectId" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1/@action/@properties.5"/>
+            </action>
+          </properties>
+          <properties name="actionInstanceId" value="" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.2"/>
+          <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.3"/>
+          <properties name="disabled" value="" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.4"/>
+          <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.5"/>
+          <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.6"/>
+          <properties name="redirectObjectId" value="sessionparameters.ci1.last_policy_id" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.7"/>
+          <properties name="xcpId" value="open_policy" entry="//@rootContainer/@children.0/@children.1/@children.1/@propertyMap.8"/>
+          <propertyMap key="text" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.0"/>
+          <propertyMap key="action" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.1"/>
+          <propertyMap key="actionInstanceId" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.2"/>
+          <propertyMap key="cls" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.3"/>
+          <propertyMap key="disabled" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.4"/>
+          <propertyMap key="hidden" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.5"/>
+          <propertyMap key="redirectPageUrlName" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.6"/>
+          <propertyMap key="redirectObjectId" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.7"/>
+          <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.1/@children.1/@properties.8"/>
+        </children>
+      </children>
     </children>
     <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_results_list" parent="//@rootContainer" widgetEntry="//@widgetMap[key='results_list']" dataService="//@dataSources[name='policy_search']">
       <properties name="title" value="" entry="//@rootContainer/@children.1/@propertyMap.0"/>
@@ -455,4 +557,7 @@
   <widgetMap key="column_box2" value="//@rootContainer/@children.0/@children.0/@children.1"/>
   <widgetMap key="columnhbox" value="//@rootContainer/@children.0/@children.0/@children.1/@children.0"/>
   <widgetMap key="button" value="//@rootContainer/@children.0/@children.0/@children.1/@children.0/@children.0"/>
+  <widgetMap key="columnvbox2" value="//@rootContainer/@children.0/@children.1"/>
+  <widgetMap key="fragment" value="//@rootContainer/@children.0/@children.1/@children.0"/>
+  <widgetMap key="open_policy" value="//@rootContainer/@children.0/@children.1/@children.1"/>
 </uitemplate:Page>
