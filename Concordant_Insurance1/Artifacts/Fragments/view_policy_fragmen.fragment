@@ -289,5 +289,8 @@
         <expression/>
       </value>
     </attributeValues>
+    <attributeValues name="vehicle" repeating="true">
+      <type xsi:type="nsAttributeDatatypes:StringType"/>
+    </attributeValues>
   </inputs>
 </uitemplate:Fragment>
