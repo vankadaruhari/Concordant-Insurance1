@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uitemplate:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:uitemplate="http://www.emc.com/xcp2/2010/uitemplate" urn="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/edit_policy.page" categoryId="com.emc.xcp.artifact.page" name="edit_policy" label="Edit Policy" templateType="business_object" templateScope="INSTANCE">
+<uitemplate:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actionflow="http://www.emc.com/xcp2/2010/actionflow" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:uitemplate="http://www.emc.com/xcp2/2010/uitemplate" urn="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/edit_policy.page" categoryId="com.emc.xcp.artifact.page" name="edit_policy" label="Edit Policy" templateType="business_object" templateScope="INSTANCE">
   <dataActions categoryId="com.emc.xcp.artifact.dataservice.dataaction" name="da_def_update_policy" label="Update Policy">
     <inputMappings name="end_date">
       <expression exprStr="widgets.end_date.value"/>
@@ -21,7 +21,14 @@
     </inputMappings>
     <contract xsi:type="nsDataserviceContract:DataActionContract" href="urn:ci1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/policy.businessobj#//@dataActionContracts[name='da_def_update_policy']"/>
   </dataActions>
+  <actions categoryId="com.emc.xcp.artifact.dataservice.actioninstance" name="create_vehicle_and__1" label="Create Vehicle and Relate to Policy-1">
+    <inputMappings name="policy">
+      <expression exprStr="policy.id"/>
+    </inputMappings>
+    <contract xsi:type="actionflow:ActionFlow" href="urn:ci1:com.emc.xcp.artifact.actionFlow:Artifacts/Action Flows/create_vehicle_and_.actionflow#/"/>
+  </actions>
   <actionInstanceProperty actionInstance="//@dataActions[name='da_def_update_policy']"/>
+  <actionInstanceProperty actionInstance="//@actions[name='create_vehicle_and__1']"/>
   <title exprStr="Edit Policy"/>
   <rootContainer widgetEntry="//@widgetMap[key='root']">
     <properties name="xcpId" value="root" entry="//@rootContainer/@propertyMap.0"/>
@@ -282,28 +289,20 @@
         <propertyMap key="halign" value="//@rootContainer/@children.1/@children.0/@properties.9"/>
         <propertyMap key="valign" value="//@rootContainer/@children.1/@children.0/@properties.10"/>
         <propertyMap key="xcpId" value="//@rootContainer/@children.1/@children.0/@properties.11"/>
-        <children componentDefinitionId="xcp_button" parent="//@rootContainer/@children.1/@children.0" widgetEntry="//@widgetMap[key='button']" dataService="//@dataActions[name='da_def_update_policy']">
-          <properties name="text" value="Save" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.0"/>
+        <children componentDefinitionId="xcp_button" parent="//@rootContainer/@children.1/@children.0" widgetEntry="//@widgetMap[key='add_vehicle']" action="//@actions[name='create_vehicle_and__1']">
+          <properties name="text" value="Add Vehicle" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.0"/>
           <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.1">
             <action>
-              <properties name="defaultConfirmationPrompt" value="Are you sure you want to update the item?" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.0"/>
-              <properties name="showConfirmation" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.1"/>
-              <properties name="redirectStyle" value="application" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.2"/>
-              <properties name="pageSelectionType" value="page" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.3"/>
-              <properties name="showSuccessNotification" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.4"/>
-              <properties name="actionType" value="update" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.5"/>
-              <properties xsi:type="uitemplate:DataboundProperty" name="redirectUrl" value="application/ci1_policy_search" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.6">
-                <data selectionName="policy_search" selectionLabel="Policy Search">
-                  <dataRef href="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/policy_search.page#/"/>
-                </data>
-              </properties>
-              <propertyMap key="defaultConfirmationPrompt" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.0"/>
-              <propertyMap key="showConfirmation" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.1"/>
-              <propertyMap key="redirectStyle" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.2"/>
-              <propertyMap key="pageSelectionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.3"/>
-              <propertyMap key="showSuccessNotification" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.4"/>
-              <propertyMap key="actionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.5"/>
-              <propertyMap key="redirectUrl" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.6"/>
+              <properties name="redirectStyle" value="current" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.0"/>
+              <properties name="showSuccessNotification" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.1"/>
+              <properties name="showConfirmation" value="false" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.2"/>
+              <properties name="actionType" value="create" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.3"/>
+              <properties name="pageSelectionType" value="page" entry="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@propertyMap.4"/>
+              <propertyMap key="redirectStyle" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.0"/>
+              <propertyMap key="showSuccessNotification" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.1"/>
+              <propertyMap key="showConfirmation" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.2"/>
+              <propertyMap key="actionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.3"/>
+              <propertyMap key="pageSelectionType" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1/@action/@properties.4"/>
             </action>
           </properties>
           <properties name="actionInstanceId" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.2"/>
@@ -312,7 +311,7 @@
           <properties name="hidden" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.5"/>
           <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.6"/>
           <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.7"/>
-          <properties name="xcpId" value="button" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.8"/>
+          <properties name="xcpId" value="add_vehicle" entry="//@rootContainer/@children.1/@children.0/@children.0/@propertyMap.8"/>
           <propertyMap key="text" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.0"/>
           <propertyMap key="action" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.1"/>
           <propertyMap key="actionInstanceId" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.2"/>
@@ -322,6 +321,47 @@
           <propertyMap key="redirectPageUrlName" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.6"/>
           <propertyMap key="redirectObjectId" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.7"/>
           <propertyMap key="xcpId" value="//@rootContainer/@children.1/@children.0/@children.0/@properties.8"/>
+        </children>
+        <children componentDefinitionId="xcp_button" parent="//@rootContainer/@children.1/@children.0" widgetEntry="//@widgetMap[key='button']" dataService="//@dataActions[name='da_def_update_policy']">
+          <properties name="text" value="Save" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.0"/>
+          <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.1">
+            <action>
+              <properties name="defaultConfirmationPrompt" value="Are you sure you want to update the item?" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.0"/>
+              <properties name="showConfirmation" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.1"/>
+              <properties name="redirectStyle" value="application" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.2"/>
+              <properties name="pageSelectionType" value="page" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.3"/>
+              <properties name="showSuccessNotification" value="true" type="BOOLEAN" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.4"/>
+              <properties name="actionType" value="update" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.5"/>
+              <properties xsi:type="uitemplate:DataboundProperty" name="redirectUrl" value="application/ci1_policy_search" entry="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@propertyMap.6">
+                <data selectionName="policy_search" selectionLabel="Policy Search">
+                  <dataRef href="urn:ci1:com.emc.xcp.artifact.page:Artifacts/Pages/policy_search.page#/"/>
+                </data>
+              </properties>
+              <propertyMap key="defaultConfirmationPrompt" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.0"/>
+              <propertyMap key="showConfirmation" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.1"/>
+              <propertyMap key="redirectStyle" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.2"/>
+              <propertyMap key="pageSelectionType" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.3"/>
+              <propertyMap key="showSuccessNotification" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.4"/>
+              <propertyMap key="actionType" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.5"/>
+              <propertyMap key="redirectUrl" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1/@action/@properties.6"/>
+            </action>
+          </properties>
+          <properties name="actionInstanceId" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.2"/>
+          <properties name="cls" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.3"/>
+          <properties name="disabled" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.4"/>
+          <properties name="hidden" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.5"/>
+          <properties name="redirectPageUrlName" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.6"/>
+          <properties name="redirectObjectId" value="" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.7"/>
+          <properties name="xcpId" value="button" entry="//@rootContainer/@children.1/@children.0/@children.1/@propertyMap.8"/>
+          <propertyMap key="text" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.0"/>
+          <propertyMap key="action" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.1"/>
+          <propertyMap key="actionInstanceId" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.2"/>
+          <propertyMap key="cls" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.3"/>
+          <propertyMap key="disabled" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.4"/>
+          <propertyMap key="hidden" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.5"/>
+          <propertyMap key="redirectPageUrlName" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.6"/>
+          <propertyMap key="redirectObjectId" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.7"/>
+          <propertyMap key="xcpId" value="//@rootContainer/@children.1/@children.0/@children.1/@properties.8"/>
         </children>
       </children>
     </children>
@@ -334,8 +374,9 @@
   <widgetMap key="end_date" value="//@rootContainer/@children.0/@children.0/@children.3"/>
   <widgetMap key="column_box1" value="//@rootContainer/@children.1"/>
   <widgetMap key="columnhbox" value="//@rootContainer/@children.1/@children.0"/>
-  <widgetMap key="button" value="//@rootContainer/@children.1/@children.0/@children.0"/>
+  <widgetMap key="button" value="//@rootContainer/@children.1/@children.0/@children.1"/>
   <widgetMap key="policy_holder" value="//@rootContainer/@children.0/@children.0/@children.0"/>
+  <widgetMap key="add_vehicle" value="//@rootContainer/@children.1/@children.0/@children.0"/>
   <primaryModel href="urn:ci1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/policy.businessobj#/"/>
   <sessionVariables>
     <sessionVariable href="urn:ci1:com.emc.xcp.artifact.sessionvariable:Artifacts/Session Variables/last_policy_id.sessionvariable#/"/>
