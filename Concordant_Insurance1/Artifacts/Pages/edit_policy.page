@@ -337,4 +337,10 @@
   <widgetMap key="button" value="//@rootContainer/@children.1/@children.0/@children.0"/>
   <widgetMap key="policy_holder" value="//@rootContainer/@children.0/@children.0/@children.0"/>
   <primaryModel href="urn:ci1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/policy.businessobj#/"/>
+  <sessionVariables>
+    <sessionVariable href="urn:ci1:com.emc.xcp.artifact.sessionvariable:Artifacts/Session Variables/last_policy_id.sessionvariable#/"/>
+    <value>
+      <expression exprStr="policy.id"/>
+    </value>
+  </sessionVariables>
 </uitemplate:Page>
