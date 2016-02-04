@@ -313,6 +313,43 @@
           <propertyMap key="format" value="//@rootContainer/@children.0/@children.0/@children.5/@properties.10"/>
           <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.5/@properties.11"/>
         </children>
+        <children componentDefinitionId="xcp_value_display" parent="//@rootContainer/@children.0/@children.0" widgetEntry="//@widgetMap[key='value_display2']">
+          <properties name="fieldLabel" value="Testing3" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.0"/>
+          <properties name="valueType" value="STRING" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.1"/>
+          <properties name="isRepeating" value="false" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.2"/>
+          <properties name="name" value="" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.3"/>
+          <properties name="cls" value="" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.4"/>
+          <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.5">
+            <formatter componentDefinitionId="xcp_repeating_attribute_formatter">
+              <properties name="xtype" value="xcp_repeating_attribute_formatter" entry="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@propertyMap.0"/>
+              <properties name="separatorStyle" value="NEWLINE" entry="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@propertyMap.1"/>
+              <properties name="separator" value="COMMA" entry="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@propertyMap.2"/>
+              <propertyMap key="xtype" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@properties.0"/>
+              <propertyMap key="separatorStyle" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@properties.1"/>
+              <propertyMap key="separator" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.5/@formatter/@properties.2"/>
+            </formatter>
+          </properties>
+          <properties name="hstretch" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.6"/>
+          <properties name="store" value="" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.7"/>
+          <properties name="hidden" value="" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.8"/>
+          <properties xsi:type="uitemplate:DataboundProperty" name="value" value="" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.9"/>
+          <properties xsi:type="uitemplate:ObjectProperty" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.10">
+            <formatter/>
+          </properties>
+          <properties name="xcpId" value="value_display2" entry="//@rootContainer/@children.0/@children.0/@children.6/@propertyMap.11"/>
+          <propertyMap key="fieldLabel" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.0"/>
+          <propertyMap key="valueType" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.1"/>
+          <propertyMap key="isRepeating" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.2"/>
+          <propertyMap key="name" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.3"/>
+          <propertyMap key="cls" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.4"/>
+          <propertyMap key="repeatingAttributeFormat" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.5"/>
+          <propertyMap key="hstretch" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.6"/>
+          <propertyMap key="store" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.7"/>
+          <propertyMap key="hidden" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.8"/>
+          <propertyMap key="value" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.9"/>
+          <propertyMap key="format" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.10"/>
+          <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.6/@properties.11"/>
+        </children>
       </children>
     </children>
     <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_column_box" parent="//@rootContainer" widgetEntry="//@widgetMap[key='column_box1']">
@@ -453,6 +490,7 @@
   <widgetMap key="add_vehicle" value="//@rootContainer/@children.1/@children.0/@children.0"/>
   <widgetMap key="value_display" value="//@rootContainer/@children.0/@children.0/@children.4"/>
   <widgetMap key="value_display1" value="//@rootContainer/@children.0/@children.0/@children.5"/>
+  <widgetMap key="value_display2" value="//@rootContainer/@children.0/@children.0/@children.6"/>
   <primaryModel href="urn:ci1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/policy.businessobj#/"/>
   <sessionVariables>
     <sessionVariable href="urn:ci1:com.emc.xcp.artifact.sessionvariable:Artifacts/Session Variables/last_policy_id.sessionvariable#/"/>
